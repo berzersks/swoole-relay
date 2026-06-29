@@ -1,10 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AIDiffSettings">
+    <option name="showAIDiff" value="false" />
+  </component>
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd4f2001-a925-467a-9394-0054b7a99c40" name="Changes" comment="" />
+    <list default="true" id="fd4f2001-a925-467a-9394-0054b7a99c40" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Request/router/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Request/router/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/Start/console/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Start/console/console.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/configInterface.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/configInterface.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,7 +21,96 @@
   <component name="ComposerSettings">
     <execution />
   </component>
-  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
+  <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="59" />
+    <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;berzersks&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/berzersks/swoole-relay.git&quot;,
+    &quot;accountId&quot;: &quot;8ab904ef-b8e6-44d9-9ea1-c3e9dbd75a69&quot;
+  }
+}</component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
+  <component name="NextEditCompletionFeaturesState">
+    <decayedCancelled>
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000003485816593" />
+      <entry key="S2" value="1.02429831362133" />
+      <entry key="S5" value="1.2260635031726963" />
+      <entry key="S10" value="1.4754652419038807" />
+      <entry key="S30" value="1.8053654777865416" />
+      <entry key="S60" value="2.1594977953657915" />
+      <entry key="M2" value="3.062367382929415" />
+      <entry key="M5" value="5.077156688243688" />
+      <entry key="M10" value="6.654569644220642" />
+      <entry key="M15" value="7.606518059869744" />
+      <entry key="M30" value="9.594977901483333" />
+      <entry key="H1" value="11.76849917187814" />
+      <entry key="H2" value="13.517020489046145" />
+      <entry key="H4" value="14.647469802574907" />
+      <entry key="D1" value="15.757174045057921" />
+      <entry key="W1" value="15.96485573141763" />
+    </decayedCancelled>
+    <decayedSelected>
+      <entry key="MS100" value="2.1816576956892393E-8" />
+      <entry key="MS500" value="0.02936008591293786" />
+      <entry key="S2" value="0.4139418444932366" />
+      <entry key="S5" value="0.7027094890132212" />
+      <entry key="S10" value="0.8386536020047336" />
+      <entry key="S30" value="1.0479908806513707" />
+      <entry key="S60" value="1.6519603882253378" />
+      <entry key="M2" value="3.1966711240827457" />
+      <entry key="M5" value="6.16577570317601" />
+      <entry key="M10" value="8.167738170721698" />
+      <entry key="M15" value="9.184094161907275" />
+      <entry key="M30" value="10.872277931332892" />
+      <entry key="H1" value="12.39685236724699" />
+      <entry key="H2" value="13.51249196715117" />
+      <entry key="H4" value="14.201134165782221" />
+      <entry key="D1" value="14.858331568817249" />
+      <entry key="W1" value="14.979540489800938" />
+    </decayedSelected>
+    <decayedShown>
+      <entry key="MS100" value="0.015092755139468448" />
+      <entry key="MS500" value="0.434046164064723" />
+      <entry key="S2" value="1.0351192770203506" />
+      <entry key="S5" value="1.6550545852405436" />
+      <entry key="S10" value="2.140241997494032" />
+      <entry key="S30" value="2.772146259239986" />
+      <entry key="S60" value="3.7127103723643002" />
+      <entry key="M2" value="6.125867225152198" />
+      <entry key="M5" value="11.128720464144727" />
+      <entry key="M10" value="14.746093739445486" />
+      <entry key="M15" value="16.734167659975192" />
+      <entry key="M30" value="20.435415046093762" />
+      <entry key="H1" value="24.148199798519688" />
+      <entry key="H2" value="27.020551001445725" />
+      <entry key="H4" value="28.84401287734224" />
+      <entry key="D1" value="30.61472364020034" />
+      <entry key="W1" value="30.944284078145188" />
+    </decayedShown>
+  </component>
+  <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/bin/php" />
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
   &quot;associatedIndex&quot;: 2
@@ -25,22 +122,31 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.typescript.service.memoryLimit.init&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;junie.onboarding.icon.badge.shown&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;application.passwordSafe&quot;,
+    &quot;to.speed.mode.migration.done&quot;: &quot;true&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-f27c65a3e318-JavaScript-PS-251.23774.466" />
-        <option value="bundled-php-predefined-a98d8de5180a-aaeaa8632555-com.jetbrains.php.sharedIndexes-PS-251.23774.466" />
+        <option value="bundled-js-predefined-d6986cc7102b-31caf2ab9e3c-JavaScript-PS-261.25134.104" />
+        <option value="bundled-php-predefined-a98d8de5180a-6bbb74dbab74-com.jetbrains.php.sharedIndexes-PS-261.25134.104" />
       </set>
     </attachedChunks>
   </component>
@@ -57,6 +163,8 @@
       <workItem from="1740362282132" duration="2718000" />
       <workItem from="1742423916089" duration="505000" />
       <workItem from="1746939233438" duration="2163000" />
+      <workItem from="1782736143944" duration="5897000" />
+      <workItem from="1782742431823" duration="1945000" />
     </task>
     <servers />
   </component>

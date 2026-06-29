@@ -147,7 +147,8 @@ class Request
             $cUrlResponse = curl_exec($curl);
             $lengthBodyHeader = curl_getinfo($curl, CURLINFO_HEADER_SIZE);
             $statusCode = curl_getinfo($curl, CURLINFO_RESPONSE_CODE);
-            curl_close($curl);
+
+
             $response->status($statusCode);
             $lastHeaders = plugins::getLastHeaders($cUrlResponse, $lengthBodyHeader)["headers"];
             $responseBody = plugins::getLastHeaders($cUrlResponse, $lengthBodyHeader)["response"];

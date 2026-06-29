@@ -34,13 +34,13 @@ class console
         $this->background_colors['light_gray'] = '47';
     }
 
-    public function color($string, $colorText = null, $background_color = null): string
+    public function color($string, $colorText = null, $background_color = ''): string
     {
         $colored_string = "";
-        if (isset($this->foreground_colors[$colorText])) {
+        if (!empty($this->foreground_colors[$colorText])) {
             $colored_string .= "\033[" . $this->foreground_colors[$colorText] . "m";
         }
-        if (isset($this->background_colors[$background_color])) {
+        if (!empty($this->background_colors[$background_color])) {
             $colored_string .= "\033[" . $this->background_colors[$background_color] . "m";
         }
         $colored_string .= $string . "\033[0m";
