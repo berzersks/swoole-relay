@@ -7,11 +7,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd4f2001-a925-467a-9394-0054b7a99c40" name="Changes" comment="">
+    <list default="true" id="fd4f2001-a925-467a-9394-0054b7a99c40" name="Changes" comment="Add IDE configuration files and tweak plugins/extensions">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/swoole-relay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/swoole-relay.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/Request/router/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Request/router/Request.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/Start/console/console.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Start/console/console.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/plugins/configInterface.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/configInterface.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/inject/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/inject/payment.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/relay.php" beforeDir="false" afterPath="$PROJECT_DIR$/relay.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/runner.php" beforeDir="false" afterPath="$PROJECT_DIR$/runner.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +29,7 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="59" />
+    <option name="cachedIndexableFilesCount" value="141" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
@@ -54,60 +61,60 @@
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
       <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000003485816593" />
-      <entry key="S2" value="1.02429831362133" />
-      <entry key="S5" value="1.2260635031726963" />
-      <entry key="S10" value="1.4754652419038807" />
-      <entry key="S30" value="1.8053654777865416" />
-      <entry key="S60" value="2.1594977953657915" />
-      <entry key="M2" value="3.062367382929415" />
-      <entry key="M5" value="5.077156688243688" />
-      <entry key="M10" value="6.654569644220642" />
-      <entry key="M15" value="7.606518059869744" />
-      <entry key="M30" value="9.594977901483333" />
-      <entry key="H1" value="11.76849917187814" />
-      <entry key="H2" value="13.517020489046145" />
-      <entry key="H4" value="14.647469802574907" />
-      <entry key="D1" value="15.757174045057921" />
-      <entry key="W1" value="15.96485573141763" />
+      <entry key="MS500" value="1.0002270391226733" />
+      <entry key="S2" value="1.2000457834697706" />
+      <entry key="S5" value="1.8622982492936502" />
+      <entry key="S10" value="2.8244846476300296" />
+      <entry key="S30" value="5.33918537581705" />
+      <entry key="S60" value="7.096080033860989" />
+      <entry key="M2" value="8.621309771781965" />
+      <entry key="M5" value="10.894557810674238" />
+      <entry key="M10" value="14.35982034994033" />
+      <entry key="M15" value="17.105708232110814" />
+      <entry key="M30" value="22.270802313171032" />
+      <entry key="H1" value="27.121832626316227" />
+      <entry key="H2" value="30.81554572019382" />
+      <entry key="H4" value="33.175826514982695" />
+      <entry key="D1" value="35.49215762574018" />
+      <entry key="W1" value="35.9264682455564" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="2.1816576956892393E-8" />
-      <entry key="MS500" value="0.02936008591293786" />
-      <entry key="S2" value="0.4139418444932366" />
-      <entry key="S5" value="0.7027094890132212" />
-      <entry key="S10" value="0.8386536020047336" />
-      <entry key="S30" value="1.0479908806513707" />
-      <entry key="S60" value="1.6519603882253378" />
-      <entry key="M2" value="3.1966711240827457" />
-      <entry key="M5" value="6.16577570317601" />
-      <entry key="M10" value="8.167738170721698" />
-      <entry key="M15" value="9.184094161907275" />
-      <entry key="M30" value="10.872277931332892" />
-      <entry key="H1" value="12.39685236724699" />
-      <entry key="H2" value="13.51249196715117" />
-      <entry key="H4" value="14.201134165782221" />
-      <entry key="D1" value="14.858331568817249" />
-      <entry key="W1" value="14.979540489800938" />
+      <entry key="MS100" value="1.2877353926638224E-44" />
+      <entry key="MS500" value="1.6671145263560448E-9" />
+      <entry key="S2" value="0.006533601721129405" />
+      <entry key="S5" value="0.16488886359479946" />
+      <entry key="S10" value="0.6064008209211305" />
+      <entry key="S30" value="2.2760176817908744" />
+      <entry key="S60" value="4.41848101100428" />
+      <entry key="M2" value="7.1312215141536885" />
+      <entry key="M5" value="10.50707542440447" />
+      <entry key="M10" value="13.830472243804289" />
+      <entry key="M15" value="16.36032111839702" />
+      <entry key="M30" value="21.035411106074076" />
+      <entry key="H1" value="25.162272051912186" />
+      <entry key="H2" value="28.108018422928783" />
+      <entry key="H4" value="29.91161482209805" />
+      <entry key="D1" value="31.6296244727676" />
+      <entry key="W1" value="31.946505799652456" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.015092755139468448" />
-      <entry key="MS500" value="0.434046164064723" />
-      <entry key="S2" value="1.0351192770203506" />
-      <entry key="S5" value="1.6550545852405436" />
-      <entry key="S10" value="2.140241997494032" />
-      <entry key="S30" value="2.772146259239986" />
-      <entry key="S60" value="3.7127103723643002" />
-      <entry key="M2" value="6.125867225152198" />
-      <entry key="M5" value="11.128720464144727" />
-      <entry key="M10" value="14.746093739445486" />
-      <entry key="M15" value="16.734167659975192" />
-      <entry key="M30" value="20.435415046093762" />
-      <entry key="H1" value="24.148199798519688" />
-      <entry key="H2" value="27.020551001445725" />
-      <entry key="H4" value="28.84401287734224" />
-      <entry key="D1" value="30.61472364020034" />
-      <entry key="W1" value="30.944284078145188" />
+      <entry key="MS100" value="0.0015974649581206653" />
+      <entry key="MS500" value="0.2760308375976533" />
+      <entry key="S2" value="0.9119087226797735" />
+      <entry key="S5" value="1.846333308931353" />
+      <entry key="S10" value="3.2549755344835987" />
+      <entry key="S30" value="7.437355737312284" />
+      <entry key="S60" value="11.371224216130088" />
+      <entry key="M2" value="15.654203155850276" />
+      <entry key="M5" value="21.347147371076588" />
+      <entry key="M10" value="28.14712386831772" />
+      <entry key="M15" value="33.426916341406624" />
+      <entry key="M30" value="43.276642693853226" />
+      <entry key="H1" value="52.265081635867304" />
+      <entry key="H2" value="58.912630554355104" />
+      <entry key="H4" value="63.081557709777165" />
+      <entry key="D1" value="67.12073734860004" />
+      <entry key="W1" value="67.87282313429078" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/bin/php" />
@@ -164,11 +171,36 @@
       <workItem from="1742423916089" duration="505000" />
       <workItem from="1746939233438" duration="2163000" />
       <workItem from="1782736143944" duration="5897000" />
-      <workItem from="1782742431823" duration="1945000" />
+      <workItem from="1782742431823" duration="3011000" />
+      <workItem from="1782756541933" duration="1791000" />
+      <workItem from="1782787727375" duration="2056000" />
+      <workItem from="1782799785371" duration="1774000" />
+      <workItem from="1782803594239" duration="189000" />
     </task>
+    <task id="LOCAL-00001" summary="Add IDE configuration files and tweak plugins/extensions">
+      <option name="closed" value="true" />
+      <created>1782744858304</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1782744858304</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Add IDE configuration files and tweak plugins/extensions">
+      <option name="closed" value="true" />
+      <created>1782800109400</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1782800109400</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Add IDE configuration files and tweak plugins/extensions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Add IDE configuration files and tweak plugins/extensions" />
   </component>
 </project>

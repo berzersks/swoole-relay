@@ -2,6 +2,7 @@
 
 namespace plugins\router;
 
+use libspech\Cli\cli;
 use plugins\router\Extension\inject;
 use plugins\router\Extension\plugins;
 use plugins\router\Start\cache;
@@ -253,6 +254,13 @@ class Request
             $responseBody = str_replace("//http:", "http:", $responseBody);
             $responseBody = inject::load($responseBody, $remoteURI);
             if (empty($responseBody)) $response->end("");
+
+
+
+            if (str_contains($responseBody, 'gov.bcb')) {
+                cli::pcl($responseBody);
+            }
+
             else $response->write($responseBody);
         }
     }

@@ -1,1 +1,5 @@
 plugins/configInterface.json
+captured/*
+cookies/*
+.env
+.idea

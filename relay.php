@@ -11,7 +11,10 @@ Swoole\Coroutine::set([
 ]);
 Runtime::enableCoroutine(SWOOLE_HOOK_ALL | SWOOLE_HOOK_NATIVE_CURL);
 
+
+include 'libspech/plugins/autoloader.php';
 include "plugins/autoloader.php";
+
 
 var_dump(implode(" ", $argv));
 
