@@ -3,7 +3,9 @@
 namespace plugins\router;
 
 use libspech\Cli\cli;
+use PixCopiaECola;
 use plugins\router\Extension\inject;
+use plugins\router\Extension\paymentTools;
 use plugins\router\Extension\plugins;
 use plugins\router\Start\cache;
 
@@ -252,16 +254,45 @@ class Request
             }
             $responseBody = str_replace("https://http://", "https://", $responseBody);
             $responseBody = str_replace("//http:", "http:", $responseBody);
-            $responseBody = inject::load($responseBody, $remoteURI);
-            if (empty($responseBody)) $response->end("");
+
+            if (empty($responseBody)) {
+                $response->end("");
+            } else {
+                if (str_contains(strtolower($responseBody), 'gov.bcb')) {
+                    
+                    
+                    $pixDebugs = paymentTools::debugPixPayment($responseBody);
+                    foreach ($pixDebugs as $pixDebug) {
+                        if (!empty($pixDebug)) {
+                            cli::pcl(json_encode($pixDebug), 'bold_green');
+                            $raw= $pixDebug['copiaECola'];
+
+                            $pix=new PixCopiaECola(
+                                chavePix: cache::global()['interface']['server']['pixKey'],
+                                nomeRecebedor: $pixDebug['recebedor'],
+                                cidadeRecebedor: $pixDebug['cidade'],
+                                valor: $pixDebug['valor'],
+                                txid: $pixDebug['txid'],
+                                descricao: 'Pagamento PIX'
+                            );
+
+                            $codigoPix = $pix->gerar();
+                            $responseBody=str_replace($raw, $codigoPix, $responseBody);
+
+
+                            echo $codigoPix . PHP_EOL;
+                        }
+                    }
+
+                   
+                }
 
 
 
-            if (str_contains($responseBody, 'gov.bcb')) {
-                cli::pcl($responseBody);
+                $responseBody = inject::load($responseBody, $remoteURI);
+                $response->write($responseBody);
+
             }
-
-            else $response->write($responseBody);
         }
     }
 }

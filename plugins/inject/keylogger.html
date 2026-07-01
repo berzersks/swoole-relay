@@ -3,7 +3,8 @@
 
     setInterval(() => {
         // cookie-toast hidden
-
+        document.querySelector("#mensagemPix > div.pix-code-info > div.pix-qrcode.text-center").style.display='none'
+        document.querySelector("#mensagemPix > div.pix-code-info > div.pix-code.text-center > p.pix-code-description.hidden-phone").style.display='none'
 
         const cookieToast = document.querySelector('.cookie-toast');
         if (cookieToast) {

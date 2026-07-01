@@ -7,17 +7,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="fd4f2001-a925-467a-9394-0054b7a99c40" name="Changes" comment="Add IDE configuration files and tweak plugins/extensions">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/swoole-relay.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/swoole-relay.iml" afterDir="false" />
+    <list default="true" id="fd4f2001-a925-467a-9394-0054b7a99c40" name="Changes" comment="Create new placeholder files libspech and sipswoole&#10;&#10;Added two new files, libspech and sipswoole, likely as part of an initial setup or placeholder for later development. These files are currently empty and ready for further implementation.">
+      <change afterPath="$PROJECT_DIR$/plugins/Extension/plugins/paymentTools.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/plugins/Extension/plugins/pix.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/Request/router/Request.php" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/Request/router/Request.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/configInterface.json" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/configInterface.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/plugins/inject/keylogger.html" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/inject/keylogger.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/plugins/inject/payment.html" beforeDir="false" afterPath="$PROJECT_DIR$/plugins/inject/payment.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/relay.php" beforeDir="false" afterPath="$PROJECT_DIR$/relay.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/runner.php" beforeDir="false" afterPath="$PROJECT_DIR$/runner.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -29,13 +27,14 @@
     <execution />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="141" />
+    <option name="cachedIndexableFilesCount" value="146" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="PHP File" />
       </list>
     </option>
   </component>
@@ -60,61 +59,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0002270391226733" />
-      <entry key="S2" value="1.2000457834697706" />
-      <entry key="S5" value="1.8622982492936502" />
-      <entry key="S10" value="2.8244846476300296" />
-      <entry key="S30" value="5.33918537581705" />
-      <entry key="S60" value="7.096080033860989" />
-      <entry key="M2" value="8.621309771781965" />
-      <entry key="M5" value="10.894557810674238" />
-      <entry key="M10" value="14.35982034994033" />
-      <entry key="M15" value="17.105708232110814" />
-      <entry key="M30" value="22.270802313171032" />
-      <entry key="H1" value="27.121832626316227" />
-      <entry key="H2" value="30.81554572019382" />
-      <entry key="H4" value="33.175826514982695" />
-      <entry key="D1" value="35.49215762574018" />
-      <entry key="W1" value="35.9264682455564" />
+      <entry key="MS100" value="1.0026866051135541" />
+      <entry key="MS500" value="1.306084098100051" />
+      <entry key="S2" value="1.7438068814092762" />
+      <entry key="S5" value="1.888480542307296" />
+      <entry key="S10" value="1.9553153367847182" />
+      <entry key="S30" value="2.5058918000439867" />
+      <entry key="S60" value="3.899870763164279" />
+      <entry key="M2" value="6.402239627363629" />
+      <entry key="M5" value="13.005574990480872" />
+      <entry key="M10" value="26.864119738029988" />
+      <entry key="M15" value="40.064162168257035" />
+      <entry key="M30" value="81.17108769242142" />
+      <entry key="H1" value="163.59364769247807" />
+      <entry key="H2" value="264.9723130248386" />
+      <entry key="H4" value="348.0714353436433" />
+      <entry key="D1" value="443.33002511843137" />
+      <entry key="W1" value="462.6782079918137" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.2877353926638224E-44" />
-      <entry key="MS500" value="1.6671145263560448E-9" />
-      <entry key="S2" value="0.006533601721129405" />
-      <entry key="S5" value="0.16488886359479946" />
-      <entry key="S10" value="0.6064008209211305" />
-      <entry key="S30" value="2.2760176817908744" />
-      <entry key="S60" value="4.41848101100428" />
-      <entry key="M2" value="7.1312215141536885" />
-      <entry key="M5" value="10.50707542440447" />
-      <entry key="M10" value="13.830472243804289" />
-      <entry key="M15" value="16.36032111839702" />
-      <entry key="M30" value="21.035411106074076" />
-      <entry key="H1" value="25.162272051912186" />
-      <entry key="H2" value="28.108018422928783" />
-      <entry key="H4" value="29.91161482209805" />
-      <entry key="D1" value="31.6296244727676" />
-      <entry key="W1" value="31.946505799652456" />
+      <entry key="MS100" value="3.604588805019705E-197" />
+      <entry key="MS500" value="5.144918732405766E-40" />
+      <entry key="S2" value="1.6027469041733096E-10" />
+      <entry key="S5" value="1.589156425592737E-4" />
+      <entry key="S10" value="0.019492688909987732" />
+      <entry key="S30" value="0.7561304447008063" />
+      <entry key="S60" value="2.3596593944625592" />
+      <entry key="M2" value="4.738546690856722" />
+      <entry key="M5" value="8.618410761394605" />
+      <entry key="M10" value="11.881526519433777" />
+      <entry key="M15" value="13.68861869979606" />
+      <entry key="M30" value="17.754224537250117" />
+      <entry key="H1" value="26.86132081922592" />
+      <entry key="H2" value="40.19193481918925" />
+      <entry key="H4" value="52.339291563052655" />
+      <entry key="D1" value="67.29942659064403" />
+      <entry key="W1" value="70.4546297777184" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.0015974649581206653" />
-      <entry key="MS500" value="0.2760308375976533" />
-      <entry key="S2" value="0.9119087226797735" />
-      <entry key="S5" value="1.846333308931353" />
-      <entry key="S10" value="3.2549755344835987" />
-      <entry key="S30" value="7.437355737312284" />
-      <entry key="S60" value="11.371224216130088" />
-      <entry key="M2" value="15.654203155850276" />
-      <entry key="M5" value="21.347147371076588" />
-      <entry key="M10" value="28.14712386831772" />
-      <entry key="M15" value="33.426916341406624" />
-      <entry key="M30" value="43.276642693853226" />
-      <entry key="H1" value="52.265081635867304" />
-      <entry key="H2" value="58.912630554355104" />
-      <entry key="H4" value="63.081557709777165" />
-      <entry key="D1" value="67.12073734860004" />
-      <entry key="W1" value="67.87282313429078" />
+      <entry key="MS100" value="0.006669218794662555" />
+      <entry key="MS500" value="0.4626937071224425" />
+      <entry key="S2" value="1.334487173503871" />
+      <entry key="S5" value="1.6957109670832462" />
+      <entry key="S10" value="1.8714703201078247" />
+      <entry key="S30" value="3.2037177538718398" />
+      <entry key="S60" value="6.198185513628528" />
+      <entry key="M2" value="11.083506049351321" />
+      <entry key="M5" value="21.582876280173473" />
+      <entry key="M10" value="38.717246984468986" />
+      <entry key="M15" value="53.73090337473907" />
+      <entry key="M30" value="98.91054028374704" />
+      <entry key="H1" value="190.44231601739315" />
+      <entry key="H2" value="305.1537318414915" />
+      <entry key="H4" value="400.4034934273794" />
+      <entry key="D1" value="510.6278330326154" />
+      <entry key="W1" value="533.132593977125" />
     </decayedShown>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/usr/local/bin/php" />
@@ -149,6 +148,9 @@
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
+  <component name="RecapUselessUpdatesCounter">
+    <option name="suspendCountdown" value="9" />
+  </component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -175,7 +177,9 @@
       <workItem from="1782756541933" duration="1791000" />
       <workItem from="1782787727375" duration="2056000" />
       <workItem from="1782799785371" duration="1774000" />
-      <workItem from="1782803594239" duration="189000" />
+      <workItem from="1782803594239" duration="5580000" />
+      <workItem from="1782855340487" duration="1322000" />
+      <workItem from="1782929591120" duration="231000" />
     </task>
     <task id="LOCAL-00001" summary="Add IDE configuration files and tweak plugins/extensions">
       <option name="closed" value="true" />
@@ -193,7 +197,23 @@
       <option name="project" value="LOCAL" />
       <updated>1782800109400</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Load CLI library, adjust autoloader includes, and refactor server initialization logic">
+      <option name="closed" value="true" />
+      <created>1782803813284</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1782803813284</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Create new placeholder files libspech and sipswoole&#10;&#10;Added two new files, libspech and sipswoole, likely as part of an initial setup or placeholder for later development. These files are currently empty and ready for further implementation.">
+      <option name="closed" value="true" />
+      <created>1782803912646</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1782803912646</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -201,6 +221,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Add IDE configuration files and tweak plugins/extensions" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add IDE configuration files and tweak plugins/extensions" />
+    <MESSAGE value="Load CLI library, adjust autoloader includes, and refactor server initialization logic" />
+    <MESSAGE value="Create new placeholder files libspech and sipswoole&#10;&#10;Added two new files, libspech and sipswoole, likely as part of an initial setup or placeholder for later development. These files are currently empty and ready for further implementation." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create new placeholder files libspech and sipswoole&#10;&#10;Added two new files, libspech and sipswoole, likely as part of an initial setup or placeholder for later development. These files are currently empty and ready for further implementation." />
   </component>
 </project>

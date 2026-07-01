@@ -4,8 +4,12 @@ use plugins\router\Start\cache;
 use plugins\router\Start\console;
 use plugins\terminal;
 
-
+include 'libspech/plugins/autoloader.php';
 include 'plugins/autoloader.php';
+
+
+
+
 if (empty($argv[1]) && empty($argv[2]) && empty($argv[3])) {
     $cache = cache::global()['interface'];
     $script = sprintf("php relay.php %s %s %s",
@@ -17,10 +21,11 @@ if (empty($argv[1]) && empty($argv[2]) && empty($argv[3])) {
 
 
 $p = readline("Deseja iniciar o servidor? (s/n): ");
-Co\run(function () use ($script) {
 
-    echo shell_exec('clear');
-    Co\run(fn() => terminal::asyncShell($script, (new console())));
-    sleep(1);
-});
 
+for (;;) {
+    Co\run(function () use ($script) {
+        \libspech\Coroutine\bash::command($script);
+    });
+sleep(2);
+}
